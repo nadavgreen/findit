@@ -1,5 +1,3 @@
-const {routers} = require('./router.js')
-
 const getApp = () => {
 	const app = require('express')();
 	app.use(require('body-parser').json())
