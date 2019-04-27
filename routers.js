@@ -13,19 +13,19 @@ routers.users = () => {
 	return router
 }
 
-router.colour = () => {
+routers.colour = () => {
 	const router = express.Router()
 	router.get('/read', colourRouters.read)
 	return router
 }
 
-router.type = () => {
+routers.type = () => {
 	const router = express.Router()
 	router.get('/read', typeRouters.read)
 	return router
 }
 
-router.items = () => {
+routers.items = () => {
 	const router = express.Router()
 	router.post('/create', itemsRouters.create)
 	router.get('/read', itemsRouters.read)
