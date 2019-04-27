@@ -21,7 +21,7 @@ usersRouters.read = (req, res)=>{
     .then(res.json({'msg': 'Successful'}))
     .catch((error)=>{
         console.log(error)
-        res.json({'error': err})
+        res.json({'error': 'error'})
     })
 }
 
