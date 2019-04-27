@@ -16,8 +16,8 @@ usersRouters.create = (req, res)=>{
 
 
 usersRouters.read = (req, res) => {
-    const params = req.params;
-    db.read('users', params)
+    const body = req.body;
+    db.read('users', body)
     .then(data => res.json({'msg': data}))
     .catch((error)=>{
         console.log(error)
