@@ -1,3 +1,5 @@
+const {routers} = require('./routers')
+
 const getApp = () => {
 	const app = require('express')();
 	app.use(require('body-parser').json())
@@ -7,6 +9,8 @@ const getApp = () => {
 	    	res.header("Access-Control-Allow-Methods", "PUT, DELETE")
 		next()
 	});
+
+	app.use('/users', routers.users())
 
     	return app;
 }
