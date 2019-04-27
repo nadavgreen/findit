@@ -10,7 +10,7 @@ usersRouters.create = (req, res)=>{
     .then(res.json({'msg': 'Successful'}))
     .catch(err=>{
         console.log(err)
-        res.json({'error': err})
+        res.json({'error': 'error'})
     })
 }
 
