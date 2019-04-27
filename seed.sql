@@ -33,7 +33,9 @@ CREATE TABLE items (
   status VARCHAR NOT NULL,
   fedex_location VARCHAR NOT NULL,
   title VARCHAR NOT NULL,
-  img_url TEXT NOT NULL
+  img_url TEXT NOT NULL,
+  claim_id INT,
+  id_image TEXT
 );
 
 INSERT INTO users (name, email, password) VALUES ('Rich', 'rich@rich.rich', 'rich');
