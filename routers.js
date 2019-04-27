@@ -6,7 +6,7 @@ const routers = {}
 routers.users = () => {
 	const router = express.Router()
 	router.post('/create', usersRouters.create)
-	router.get('/read', usersRouters.read)
+	router.get('/read/:id', usersRouters.read)
 	return router
 }
 
