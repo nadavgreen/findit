@@ -1,13 +1,13 @@
 const {findit} = require('../services');
 const db = new findit();
 
-const itemRouters = {}
+const itemsRouters = {}
 
 
-itemRouters.create = (req, res)=>{
+itemsRouters.create = (req, res)=>{
     const body = req.body;
-    db.create('items', body)
-    .then(res.json({'msg': 'created item'}))
+    db.create('itemss', body)
+    .then(res.json({'msg': 'created items'}))
     .catch(err=>{
         console.log(err)
         res.json({'err': 'error'})
@@ -15,10 +15,10 @@ itemRouters.create = (req, res)=>{
 
 }
 
-itemRouters.read = (req, res) =>{
+itemsRouters.read = (req, res) =>{
     const body = req.body;
     
-    db.readMultiple('items', body)
+    db.readMultiple('itemss', body)
     .then(data=> res.json({'msg': data}))
     .catch(error=>{
         console.log(error)
@@ -26,10 +26,10 @@ itemRouters.read = (req, res) =>{
     })
 }
 
-itemRouters.put = (req, res) =>{
+itemsRouters.put = (req, res) =>{
     const body = req.body;
     const {id} = req.body;
-    db.update('items', body, id)
+    db.update('itemss', body, id)
     .then(res.json({'msg': 'created'}))
     .catch(err=>{
         console.log(err)
@@ -38,4 +38,4 @@ itemRouters.put = (req, res) =>{
 }
 
 
-module.exports = {itemRouters}
+module.exports = {itemsRouters}
