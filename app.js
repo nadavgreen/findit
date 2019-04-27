@@ -1,4 +1,4 @@
-const {routers} = require('./router.js')
+const {routers} = require('./routers')
 
 const getApp = () => {
 	const app = require('express')();
@@ -9,6 +9,8 @@ const getApp = () => {
 	    	res.header("Access-Control-Allow-Methods", "PUT, DELETE")
 		next()
 	});
+
+	app.use('/users', routers.users())
 
     	return app;
 }
