@@ -32,7 +32,8 @@ CREATE TABLE items (
   date VARCHAR NOT NULL,
   status VARCHAR NOT NULL,
   fedex_location VARCHAR NOT NULL,
-  title VARCHAR NOT NULL
+  title VARCHAR NOT NULL,
+  img_url TEXT NOT NULL
 );
 
 INSERT INTO users (name, email, password) VALUES ('Rich', 'rich@rich.rich', 'rich');
@@ -51,4 +52,4 @@ INSERT INTO colour (colour) VALUES ('red');
 INSERT INTO colour (colour) VALUES ('yellow');
 INSERT INTO colour (colour) VALUES ('other');
 
-INSERT INTO items (user_id, type_id, colour_id, lost_location, date, status, fedex_location, title) VALUES (1, 1, 1, '12345', '12/31/19', 'not claimed', '12345 street ave', 'black scarf')
+INSERT INTO items (user_id, type_id, colour_id, lost_location, date, status, fedex_location, title, img_url) VALUES (1, 1, 3, '12345', '12/31/19', 'not claimed', '12345 street ave', 'green scarf', 'https://tcprd-tdcdn.netdna-ssl.com/green-acrylic-green-london-tartan-scarf-240375-105-1600-0.jpg?id=SC240375')
