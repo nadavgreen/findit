@@ -10,11 +10,6 @@ const getApp = () => {
 		next()
 	});
 
-	app.use('/users', routers.users())
-	app.use('/genres', routers.genres())
-	app.use('/shows', routers.shows())
-	app.use('/comments', routers.comments())
-
     	return app;
 }
 
