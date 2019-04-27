@@ -1,4 +1,4 @@
-const {findIt} = require('../services');
+const {findit} = require('../services');
 const db = new findit();
 
 const itemRouter = {}
