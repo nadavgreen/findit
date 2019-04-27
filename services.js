@@ -33,8 +33,9 @@ class findit {
 	readMultiple(table, data) {
 		const keys = Object.keys(data)
 		const sql = keys.reduce((str, e, i) => {
-			if(i !== keys.length - 1) return str += `${e} = $[${e}] AND `
-			return str += `${e} = $[${e}];`
+		//	if(i !== keys.length - 1) return str += `${e} = $[${e}] AND `
+		//	return str += `${e} = $[${e}];`
+			return str += `${e} = $[${e}]`
 		}, `SELECT * FROM ${table} WHERE `)
 		return this.dbConnect(this.addi).any(sql, data)
 	}
