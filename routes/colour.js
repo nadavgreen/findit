@@ -14,3 +14,5 @@ colourRouters.read = (req, res) =>{
         res.json({'error': 'error'})
     })
 }
+
+module.exports = {colourRouters}
