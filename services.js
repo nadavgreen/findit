@@ -30,6 +30,15 @@ class findit {
 		return this.dbConnect(this.addi).any(sql)
 	}
 
+	readMultiple(table, data) {
+		const keys = Object.keys(data)
+		const sql = keys.reduce((str, e, i) => {
+			if(i !== keys.length - 1) return str += `${e} = $[${e}] AND WHERE`
+			return str += `${e} = $[${e}];`
+		}, `SELECT * FROM ${table} WHERE `)
+		return this.dbConnect(this.addi).any(sql, data)
+	}
+
 	update(table, data, term) {
 		const keys = Object.keys(data)
 		let sql = keys.reduce((str, e, i) => {
