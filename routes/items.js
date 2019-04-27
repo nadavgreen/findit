@@ -19,7 +19,11 @@ itemsRouters.read = (req, res) =>{
     const body = req.body;
     
     db.readMultiple('items', body)
-    .then(data=> res.json({'msg': data}))
+    .then(data=> {
+	console.log(data)
+	res.json({'msg': data}
+	}
+	))
     .catch(error=>{
         console.log(error)
         res.json({'err': 'error'})
