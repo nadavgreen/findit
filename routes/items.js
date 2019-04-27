@@ -1,13 +1,13 @@
 const {findit} = require('../services');
 const db = new findit();
 
-const itemRouter = {}
+const itemsRouters = {}
 
 
-itemRouter.create = (req, res)=>{
+itemsRouters.create = (req, res)=>{
     const body = req.body;
     db.create('items', body)
-    .then(res.json({'msg': 'created item'}))
+    .then(res.json({'msg': 'created items'}))
     .catch(err=>{
         console.log(err)
         res.json({'err': 'error'})
@@ -15,7 +15,7 @@ itemRouter.create = (req, res)=>{
 
 }
 
-itemRouter.read = (req, res) =>{
+itemsRouters.read = (req, res) =>{
     const body = req.body;
     
     db.readMultiple('items', body)
@@ -26,7 +26,7 @@ itemRouter.read = (req, res) =>{
     })
 }
 
-itemRouter.put = (req, res) =>{
+itemsRouters.put = (req, res) =>{
     const body = req.body;
     const {id} = req.body;
     db.update('items', body, id)
@@ -38,4 +38,4 @@ itemRouter.put = (req, res) =>{
 }
 
 
-module.exports = {itemRouter}
+module.exports = {itemsRouters}
