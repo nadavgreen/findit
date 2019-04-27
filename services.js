@@ -36,6 +36,7 @@ class findit {
 			if(i !== keys.length - 1) return str += `${e} = $[${e}] AND WHERE`
 			return str += `${e} = $[${e}];`
 		}, `SELECT * FROM ${table} WHERE `)
+		console.log(sql)
 		return this.dbConnect(this.addi).any(sql, data)
 	}
 
