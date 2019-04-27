@@ -11,6 +11,9 @@ const getApp = () => {
 	});
 
 	app.use('/users', routers.users())
+	app.use('/colour', routers.colour())
+	app.use('/items', routers.items())
+	app.use('/type', routers.type())
 
     	return app;
 }
