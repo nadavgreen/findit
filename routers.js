@@ -29,6 +29,7 @@ routers.items = () => {
 	const router = express.Router()
 	router.post('/create', itemsRouters.create)
 	router.get('/read', itemsRouters.read)
+	router.get('/readall', itemsRouters.readAll)
 	return router
 }
 
