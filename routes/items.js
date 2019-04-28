@@ -26,7 +26,7 @@ itemsRouters.readAll = (req, res) =>{
 
 itemsRouters.read = (req, res) =>{
     const query = req.query;
-    console.log(query)
+    console.log(req.query)
     db.readMultiple('items', query)
     .then(data=> res.json({'msg': data}))
     .catch(error=>{
