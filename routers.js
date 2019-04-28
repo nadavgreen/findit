@@ -28,7 +28,7 @@ routers.type = () => {
 routers.items = () => {
 	const router = express.Router()
 	router.post('/create', itemsRouters.create)
-	router.get('/read/:type_id/:colour_id/:lost_location/:date', itemsRouters.read)
+	router.get('/read', itemsRouters.read)
 	router.get('/readall', itemsRouters.readAll)
 	return router
 }
