@@ -47,7 +47,6 @@ class findit {
 			return str += `${e} = $[${e}] `
 		}, `UPDATE ${table} SET `)
 		sql += `WHERE ${term} = $[${term}]`
-		console.log(sql)
 		return this.dbConnect(this.addi).none(sql, data)
 	}
 

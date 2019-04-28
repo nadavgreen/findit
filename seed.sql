@@ -40,18 +40,18 @@ CREATE TABLE items (
 
 INSERT INTO users (name, email, password) VALUES ('Rich', 'rich@rich.rich', 'rich');
 
-INSERT INTO type (type) VALUES ('clothing');
-INSERT INTO type (type) VALUES ('accessories');
-INSERT INTO type (type) VALUES ('electronics');
-INSERT INTO type (type) VALUES ('toys');
-INSERT INTO type (type) VALUES ('others');
+INSERT INTO type (type) VALUES ('Clothing');
+INSERT INTO type (type) VALUES ('Accessories');
+INSERT INTO type (type) VALUES ('Electronics');
+INSERT INTO type (type) VALUES ('Toys');
+INSERT INTO type (type) VALUES ('Others');
 
-INSERT INTO colour (colour) VALUES ('black');
-INSERT INTO colour (colour) VALUES ('white');
-INSERT INTO colour (colour) VALUES ('green');
-INSERT INTO colour (colour) VALUES ('blue');
-INSERT INTO colour (colour) VALUES ('red');
-INSERT INTO colour (colour) VALUES ('yellow');
-INSERT INTO colour (colour) VALUES ('other');
+INSERT INTO colour (colour) VALUES ('Black');
+INSERT INTO colour (colour) VALUES ('White');
+INSERT INTO colour (colour) VALUES ('Green');
+INSERT INTO colour (colour) VALUES ('Blue');
+INSERT INTO colour (colour) VALUES ('Red');
+INSERT INTO colour (colour) VALUES ('Yellow');
+INSERT INTO colour (colour) VALUES ('Other');
 
-INSERT INTO items (user_id, type_id, colour_id, lost_location, date, status, fedex_location, title, img_url) VALUES (1, 1, 3, '12345', '12/31/19', 'not claimed', '12345 street ave', 'green scarf', 'https://tcprd-tdcdn.netdna-ssl.com/green-acrylic-green-london-tartan-scarf-240375-105-1600-0.jpg?id=SC240375')
+INSERT INTO items (user_id, type_id, colour_id, lost_location, date, status, fedex_location, title, img_url) VALUES (1, 1, 3, '12345', '31/12/19', 'Not Claimed', '12345 Street Ave', 'Green Scarf', 'https://tcprd-tdcdn.netdna-ssl.com/green-acrylic-green-london-tartan-scarf-240375-105-1600-0.jpg?id=SC240375')

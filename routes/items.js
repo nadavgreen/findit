@@ -15,10 +15,18 @@ itemsRouters.create = (req, res)=>{
 
 }
 
+itemsRouters.readAll = (req, res) =>{
+	db.readAll('items')
+	.then(data=>res.json({'msg': data}))
+	.catch(err=>{
+		console.log(err)
+		res.json({'msg':'err'})
+	})
+}
+
 itemsRouters.read = (req, res) =>{
-    const body = req.body;
-    console.log(body)
-    db.readMultiple('items', body)
+    const query = req.query;
+    db.readMultiple('items', query)
     .then(data=> res.json({'msg': data}))
     .catch(error=>{
         console.log(error)
