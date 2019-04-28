@@ -16,12 +16,11 @@ itemsRouters.create = (req, res)=>{
 }
 
 itemsRouters.read = (req, res) =>{
-    const body = req.body;
-    console.log(body)
-    db.readMultiple('items', body)
+    const params = req.params;
+    console.log(params)
+    db.readMultiple('items', params)
     .then(data=> res.json({'msg': data}))
     .catch(error=>{
-        console.log(error)
         res.json({'err': 'error'})
     })
 }
