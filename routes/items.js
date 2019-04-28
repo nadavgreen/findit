@@ -15,7 +15,7 @@ itemsRouters.create = (req, res)=>{
 
 }
 
-itemsRouters.readAll = ()  =>{
+itemsRouters.readAll = (req, res) =>{
 	db.readAll('items')
 	.then(data=>res.json({'msg': data}))
 	.catch(err=>{
